@@ -4,7 +4,7 @@
         <img :src="movieItem.poster_url" class="card-img-top" alt="movie poster image">
         <div class="card-body">
             <h5 class="card-title">{{movieItem.title}}</h5>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button @click="sendMovieItem(movieItem)" type="button" class="btn btn-primary" data-toggle="modal" :data-target="'#Modal-'+movieItem.id">
                 영화 정보 상세보기
             </button>
              </div>
@@ -25,6 +25,10 @@ props : {
     
 },
 methods : {
+    sendMovieItem (movieItem) {
+        this.movieItem = movieItem
+       
+    }
 }
 }
 </script>

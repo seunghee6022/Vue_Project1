@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" :id="'Modal-'+movieItem.id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -33,7 +33,8 @@ export default {
 name : 'MovieListItemModal',
 props : {
   movieItem : Object,
-}
+},
+
 }
 </script>
 
