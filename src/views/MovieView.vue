@@ -22,7 +22,7 @@ data () {
 },
 methods : {
   getMovieList (event) {
-    axios.get('http://www.json-generator.com/api/json/get/ceNyuXZmwi?indent=2')
+    axios.get('https://www.json-generator.com/api/json/get/ceNyuXZmwi?indent=2')
     .then(res => {
       console.log("영화를 가져옵니다.")
       // console.log(event.target.hidden)
